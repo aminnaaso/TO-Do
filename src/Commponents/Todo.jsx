@@ -14,17 +14,12 @@ const Todo = () => {
         // document.getElementById('addBtn').classList.replace("bg-white", "bg-green-700 ");
         setTasks([...tasks, inputValue])
         setInputValue("")
-
-
     }
     const deleteTask = (id) => {
         setTasks(tasks.filter(i => i !== id))
     }
-
     useEffect(() => {
-
         localStorage.setItem("tasks", JSON.stringify(tasks))
-
     }, [tasks])
     return (
         <>
@@ -36,7 +31,7 @@ const Todo = () => {
                     </div>
                     <div className='flex justify-center items-center gap-1 my-4'>
                         <input onChange={(e) => setInputValue(e.target.value) && console.log("nnn")} className='py-2 w-72 px-3 border-2  rounded-lg my-3 outline-none' type='text' placeholder='Enter your task' value={inputValue} ></input>
-                        <button onClick={addtask} className=' rounded-lg py-2 px-4 bg-blue-700   border-1 border-black  outline-none text-white font-bold '>+</button>
+                        <button onClick={addtask} className=' rounded-lg py-2 px-4 bg-blue-700  border-1 border-black  outline-none text-white font-bold '>+</button>
                     </div>
 
                     <div className='flex justify-start items-center gap-2 my-2'>
