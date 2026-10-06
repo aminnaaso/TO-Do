@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
-    open: true  
-  }
+    open: true 
+  }, // <-- تم إضافة الفاصلة هنا
+  base: '/TO-Do/' // <-- تم تعديل الاسم ليطابق اسم المستودع تماماً
 })
